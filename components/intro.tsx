@@ -25,17 +25,16 @@ export default function Intro() {
                 >
                     <Image 
                         src = "/roshen.jpg"
-                        width = {192}
-                        height = {192}
+                        width = {500}
+                        height = {500}
                         quality = {100}
                         alt = "profile pic"
                         priority = {true}
-                        className = "h-24 w-24 rounded-full object-cover border-[0.35rem]
-                                    border-white shadow-xl"
+                        className = "h-48 w-48 rounded-full object-cover border-[0.25rem] border-white shadow-xl"
                     />
                 </motion.div>
                 <motion.span 
-                    className = "absolute bottom-0 right-0 text-4xl"
+                    className = "absolute bottom-0 left-5 text-4xl"
                     initial = {{opacity: 0, scale: 0}}
                     animate = {{opacity: 1, scale: 1}}
                     transition = {{
@@ -46,6 +45,19 @@ export default function Intro() {
                     }}
                 >
                     ✌
+                </motion.span>
+                <motion.span 
+                    className = "absolute bottom-0 right-1 text-4xl"
+                    initial = {{opacity: 0, scale: 0}}
+                    animate = {{opacity: 1, scale: 1}}
+                    transition = {{
+                        type: "spring", 
+                        stiffness : 125, 
+                        delay : .1,
+                        duration : .7
+                    }}
+                >
+                    😋
                 </motion.span>
             </div>
         </div>
@@ -67,9 +79,9 @@ export default function Intro() {
             </span>
             at {" "}
             <span className = "font-bold">
-                Northrop Grumman. {" "}
+                Northrop Grumman
             </span>
-            I am attempting to learn as many branches of programming as I can. {" "}
+            .{" "}I am attempting to learn as many branches of programming as I can. {" "}
             Currently, I'm learning {" "}
             <span className = "font-bold">
                 Front-End Development {" "}

@@ -20,7 +20,7 @@ export default function About() {
         </text>
         with a <text className="font-semibold">Bachelors </text>
         in <text className="font-semibold">Computer Engineering, </text>I was
-        blessed with an offer from Northrop Grumman to work as a Software
+        fortunte to receive an offer from Northrop Grumman to work as a Software
         Engineer. As of now, I have been working for Northrop Grumman for a
         little over 1.5 years and have learned an extensive amount of material.
       </p>
@@ -38,7 +38,7 @@ export default function About() {
         <text className="font-semibold underline">love</text> with working with
         a dedicated team of engineers, UI/UX designers, and the CEO of the
         company. The goal of the company was to create a mobile and web
-        application that would allow accesfible education to students all over
+        application that would allow affordable and accessible education to students all over
         the US. It was an amazing feeling to be able to see the work I had put
         in being used by various users. I began focusing on software engineering
         at that point, and specifically became more{" "}
@@ -56,7 +56,7 @@ export default function About() {
         </text>
       </p>
       <p className="mb-2">
-        Outside of work, I've been really enjoying learning the guitar, watching movies, and playing a plethora of sports.
+        Outside of work, I've been really enjoying learning the guitar, watching movies, and playing a variety of sports.
         One of my personal goals this year is to read 25 books by the end of the year. Currently at 23 out of 25!
         Since I no longer have homework to do or exams to study for, I have been enjoying reading so much more.
         Another one of my goals was to finish the Richmond Half Marathon, and I'm proud to say I completed it 🥳!!!
@@ -65,11 +65,11 @@ export default function About() {
         complete a full marathon. 
         </p>
         <p className="mb-5">
-            Some life-long goals I have are to obtain either a Master or PhD; not because I love studying, 
+            Some life-long goals I have are to obtain either a Master or PhD; not because I'm a natural student, 
             but because at some point I want to become a professor at a university. Sadly, the advanced degrees are the 
             minimal requirement to become a professor at a university 😭. Alas, when the time comes, I will once again prevail 
-            against the hardships of studying. I also want to own a cafe by the time I'm 50. I feel like it would be such a fun 
-            project, and a way I can give back to the community once I get my feet grounded. 
+            against the hardships of studying. I also want to own a cafe by the time I'm 50. I believe it would be a fulfilling 
+            and rewarding endeavor, and a way I can give back to the community once I get my feet grounded. 
         </p>
         <p>
         <text className="font-light italic">

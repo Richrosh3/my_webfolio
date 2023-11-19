@@ -2,6 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import goodReads from "@/public/goodReads.png";
+import onlineCasino from "@/public/onlineCasino.jpg"
 
 export const links = [
   {
@@ -59,18 +61,18 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "goodReads Web Scraper",
+    title: "goodreads Web Scraper",
     description:
-      "Absolutely hate the goodReads UI/UX so I created an application to scrape the website.",
+      "I absolutely hate the goodreads UI/UX so I created an application to scrape the website. Eventually, I will create a book reviews page on this website!",
     tags: ["Python"],
-    // imageUrl: ,
+    imageUrl: goodReads,
   },
   {
     title: "Online Casino",
     description:
-      "A simulated online casino with single and multi-player functionality. Have fun!",
+      "A simulated online casino with single and multi-player functionality. I had a lot of fun working with three other students to make this!",
     tags: ["Python", "HTML", "JavaScript"],
-    // imageUrl: ,
+    imageUrl: onlineCasino,
   },
 ] as const;
 
