@@ -2,15 +2,20 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
+  const {ref} = useSectionInView("About", .6);
+
   return (
-    <motion.section 
-        className="mb-28 max-w-[45rem] leading-8 sm:mb-40"
-        initial= {{opacity: 0, y: 100}}
-        animate = {{opacity:1 , y: 0}}
-        transition={{delay: .2}}
+    <motion.section
+      ref={ref}
+      className="mb-28 max-w-[45rem] leading-8 sm:mb-40 scroll-mt-28"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: .2 }}
+      id="about"
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-2">
@@ -26,8 +31,8 @@ export default function About() {
       </p>
       <p className="mb-2">
         <text className="font-light italic">
-          Now, you may ask yourself why did he decide to split paths and solely
-          focus on software engineering?
+          Now, you may ask yourself, "why did he decide to split paths and solely
+          focus on software engineering?" <br></br>Good question!
         </text>
       </p>
       <p className="mb-7">
@@ -60,18 +65,18 @@ export default function About() {
         One of my personal goals this year is to read 25 books by the end of the year. Currently at 23 out of 25!
         Since I no longer have homework to do or exams to study for, I have been enjoying reading so much more.
         Another one of my goals was to finish the Richmond Half Marathon, and I'm proud to say I completed it 🥳!!!
-        I absolutely hate running for long periods of time, but I feel like I should at least finish one full marathon in 
-        my lifetime. The Richmond Half Marathon felt so rewarding to finish, so I'm sure I'll feel even more ecstatic if I 
-        complete a full marathon. 
-        </p>
-        <p className="mb-5">
-            Some life-long goals I have are to obtain either a Master or PhD; not because I'm a natural student, 
-            but because at some point I want to become a professor at a university. Sadly, the advanced degrees are the 
-            minimal requirement to become a professor at a university 😭. Alas, when the time comes, I will once again prevail 
-            against the hardships of studying. I also want to own a cafe by the time I'm 50. I believe it would be a fulfilling 
-            and rewarding endeavor, and a way I can give back to the community once I get my feet grounded. 
-        </p>
-        <p>
+        I absolutely hate running for long periods of time, but I feel like I should at least finish one full marathon in
+        my lifetime. The Richmond Half Marathon felt so rewarding to finish, so I'm sure I'll feel even more ecstatic if I
+        complete a full marathon.
+      </p>
+      <p className="mb-5">
+        Some life-long goals I have are to obtain either a Master or PhD; not because I'm a natural student,
+        but because at some point I want to become a professor at a university. Sadly, the advanced degrees are the
+        minimal requirement to become a professor at a university 😭. Alas, when the time comes, I will once again prevail
+        against the hardships of studying. I also want to own a cafe by the time I'm 50. I believe it would be a fulfilling
+        and rewarding endeavor, and a way I can give back to the community once I get my feet grounded.
+      </p>
+      <p>
         <text className="font-light italic">
           Hope you learned a bit about me :)
         </text>
