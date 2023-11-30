@@ -37,7 +37,7 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "College Park, MD",
     description:
-      "Worked as a front-end developer, mainly utilizing React and React-Native, for a startup company called Memley.",
+      "Utilized React and React-Native to create a web/mobile application for a startup company called Memley.",
     icon: React.createElement(FaReact),
     date: "2020-2021",
   },
@@ -45,7 +45,7 @@ export const experiencesData = [
     title: "Graduated College",
     location: "College Park, MD",
     description:
-      "I graduated from the University of Maryland, College Park with a Bachelors in Computer Engineering!",
+      "Graduated from the University of Maryland, College Park with a Bachelors in Computer Engineering!",
     icon: React.createElement(LuGraduationCap),
     date: "2022",
   },
@@ -53,7 +53,7 @@ export const experiencesData = [
     title: "Software Engineer",
     location: "Baltimore, MD",
     description:
-      "I am currently working as a software engineer at Northrop Grumman.",
+      "Currently working as a software engineer at Northrop Grumman.",
     icon: React.createElement(CgWorkAlt),
     date: "2022-current",
   },
