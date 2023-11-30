@@ -21,15 +21,15 @@ export default function Project({
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [.6, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [.4, 1]);
-  
+
 
   return (
     <motion.div
-        style={{
-            scale: scaleProgress,
-            opacity: opacityProgress,
-        }}
-        className = "group mb-3 sm:mb-8 last:mb-0"
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section
         ref={ref}
