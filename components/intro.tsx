@@ -7,10 +7,12 @@ import Link from 'next/link';
 import { BsEnvelopeFill, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi"
 import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 
 export default function Intro() {
     const { ref } = useSectionInView("Home", .5);
+    const {setActiveSection, setTimeOfLastClick} =useActiveSectionContext();
 
     return (
         <section
@@ -72,18 +74,15 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
             >
                 Hello, my name is {" "}
-                <span className="font-extrabold">
-                    Roshen {" "}
+                <span className="font-extrabold bg-gradient-to-r from-blue-400 via-indigo-500 to-violet-600 text-transparent bg-clip-text">
+                    Roshen
                 </span>
-                <span className="font-semibold">
-                    :) {"\n"}
-                </span>
-                {" "}I'm currently working as a {" "}
+                !{" "}I'm currently working as a {" "}
                 <span className="font-bold">
                     Software Engineer {" "}
                 </span>
                 at {" "}
-                <span className="font-bold">
+                <span className="font-bold bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-transparent bg-clip-text">
                     Northrop Grumman
                 </span>
                 .{" "}I am attempting to learn as many branches of programming as I can. {" "}
@@ -105,23 +104,27 @@ export default function Intro() {
             >
                 <Link href="#contact"
                     className="group bg-sky-500 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-sky-950 active:scale-105 transition"
+                    onClick={() => {
+                        setActiveSection("Contact");
+                        setTimeOfLastClick(Date.now());
+                    }}
                 >
                     Contact Me <BsEnvelopeFill className="group-hover:translate-x-3 transition" />
                 </Link>
                 <a
-                    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition border border-black/5"
+                    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack"
                     href="/RoshenAbrahamResume2023.pdf"
                     target='_blank'
                 >
                     Resume <HiDownload className="group-hover:translate-y-1 transition" />
                 </a>
-                <a className=" bg-white text-gray-700 p-3 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition border border-black/5"
+                <a className=" bg-white text-gray-700 p-3 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition borderBlack"
                     href="https://www.linkedin.com/in/roshen-a-230722114/"
                     target="_blank"
                 >
                     <BsLinkedin className="text-2xl" />
                 </a>
-                <a className="bg-white text-gray-700 p-2 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition border border-black/5"
+                <a className="bg-white text-gray-700 p-2 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition borderBlack"
                     href="https://github.com/Richrosh3"
                     target="_blank"
                 >

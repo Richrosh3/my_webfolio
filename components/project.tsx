@@ -33,7 +33,7 @@ export default function Project({
     >
       <section
         ref={ref}
-        className="bg-blue-50 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] group-even:pl-8 hover:bg-sky-100 transition rounded-lg"
+        className="bg-blue-50 max-w-[42rem] borderBlack overflow-hidden sm:pr-8 relative sm:h-[20rem] group-even:pl-8 hover:bg-sky-100 transition rounded-lg"
       >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>

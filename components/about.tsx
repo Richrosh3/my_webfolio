@@ -70,7 +70,7 @@ export default function About() {
         complete a full marathon.
       </p>
       <p className="mb-5">
-        Some life-long goals I have are to obtain either a Master or PhD; not because I'm a natural student,
+        Some life-long goals I have are to obtain either a Masters or PhD; not because I'm a natural student,
         but because at some point I want to become a professor at a university. Sadly, the advanced degrees are the
         minimal requirement to become a professor at a university 😭. Alas, when the time comes, I will once again prevail
         against the hardships of studying. I also want to own a cafe by the time I'm 50. I believe it would be a fulfilling
