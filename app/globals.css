@@ -13,3 +13,11 @@ html.dark {
 .borderBlack {
     @apply border border-black/10;
 }
+
+.with-margin-left {
+    margin-left: 10px;
+}
+
+.with-margin-right {
+    margin-right: 10px;
+}

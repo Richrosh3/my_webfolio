@@ -3,14 +3,14 @@
 import React from 'react'
 import SectionHeading from './section-heading'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from '@/lib/data'
 import { useSectionInView } from '@/lib/hooks';
 import { useTheme } from '@/context/theme-context';
-import { FaRegIdBadge } from 'react-icons/fa';
+
 
 export default function Experience() {
-    const { ref } = useSectionInView("Experience", .5);
+    const { ref, inView } = useSectionInView("Experience", .5);
     const { theme } = useTheme();
 
     return (
@@ -24,20 +24,19 @@ export default function Experience() {
                 {experiencesData.map((item, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
-                            visible={true}
+                            visible={inView}
                             contentStyle={{
                                 background: theme === 'light' ? "rgb(239 246 255 / 1)" : "rgba(255,255,255,.05)",
                                 boxShadow: "none",
                                 border: 'light' ? "1px solid rgb(186 230 253 / 1)" : "1px solid #93c5fd",
                                 textAlign: "left",
                                 padding: "1.3rem 3rem",
-                                marginLeft: index % 2 === 0 ? "10px" : "0",
-                                marginRight: index % 2 !== 0 ? "10px" : "0"
                             }}
                             contentArrowStyle={{
-                                borderRight: theme === 'light' ? ".4rem solid rgb(186 230 253 / 1) " : ".4rem solid rgba(255,255,255,5)"
+                                borderRight: theme === 'light' ? ".4rem solid rgb(186 230 253 / 1) " : ".4rem solid #93c5fd"
                             }}
                             date={item.date}
+                            dateClassName={index % 2 === 0 ? "with-margin-left" : "with-margin-right"}
                             icon={item.icon}
                             iconStyle={{
                                 background: theme === 'light' ? "rgb(186 230 253 / 1)" : "#93c5fd",
