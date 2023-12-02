@@ -12,7 +12,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
     const { ref } = useSectionInView("Home", .5);
-    const {setActiveSection, setTimeOfLastClick} =useActiveSectionContext();
+    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
         <section
@@ -112,19 +112,25 @@ export default function Intro() {
                     Contact Me <BsEnvelopeFill className="group-hover:translate-x-3 transition" />
                 </Link>
                 <a
-                    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack"
+                    className=" marker:group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
+                                focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack
+                                dark:bg-white/10"
                     href="/RoshenAbrahamResume2023.pdf"
                     target='_blank'
                 >
                     Resume <HiDownload className="group-hover:translate-y-1 transition" />
                 </a>
-                <a className=" bg-white text-gray-700 p-3 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition borderBlack"
+                <a className=" bg-white text-gray-700 p-3 flex items-center gap-2 rounded-full 
+                                focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition borderBlack
+                                dark:bg-white/10 dark:text-white/60"
                     href="https://www.linkedin.com/in/roshen-a-230722114/"
                     target="_blank"
                 >
                     <BsLinkedin className="text-2xl" />
                 </a>
-                <a className="bg-white text-gray-700 p-2 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition borderBlack"
+                <a className="bg-white text-gray-700 p-2 flex items-center gap-2 rounded-full focus:scale-[1.15] 
+                                hover:scale-[1.15] hover:text-sky-950 active:scale-105 transition borderBlack
+                                dark:bg-white/10 dark:text-white/60"
                     href="https://github.com/Richrosh3"
                     target="_blank"
                 >
