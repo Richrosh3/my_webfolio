@@ -6,9 +6,12 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from '@/lib/data'
 import { useSectionInView } from '@/lib/hooks';
+import { useTheme } from '@/context/theme-context';
+import { FaRegIdBadge } from 'react-icons/fa';
 
 export default function Experience() {
     const { ref } = useSectionInView("Experience", .5);
+    const { theme } = useTheme();
 
     return (
         <section
@@ -17,36 +20,36 @@ export default function Experience() {
             className='scroll-mt-28 mb-28 sm:mb-40'
         >
             <SectionHeading> Experience</SectionHeading>
-            <VerticalTimeline lineColor="rgb(255 241 242 / 1)">
+            <VerticalTimeline lineColor= "">
                 {experiencesData.map((item, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
                             visible={true}
                             contentStyle={{
-                                background: "rgb(239 246 255 / 1)",
+                                background: theme === 'light' ? "rgb(239 246 255 / 1)" : "rgba(255,255,255,.05)",
                                 boxShadow: "none",
-                                border: "1px solid rgb(186 230 253 / 1)",
+                                border: 'light' ? "1px solid rgb(186 230 253 / 1)" : "1px solid #93c5fd",
                                 textAlign: "left",
                                 padding: "1.3rem 3rem",
                                 marginLeft: index % 2 === 0 ? "10px" : "0",
                                 marginRight: index % 2 !== 0 ? "10px" : "0"
                             }}
                             contentArrowStyle={{
-                                borderRight: ".4rem solid rgb(186 230 253 / 1)"
+                                borderRight: theme === 'light' ? ".4rem solid rgb(186 230 253 / 1) " : ".4rem solid rgba(255,255,255,5)"
                             }}
                             date={item.date}
                             icon={item.icon}
                             iconStyle={{
-                                background: "rgb(186 230 253 / 1)",
+                                background: theme === 'light' ? "rgb(186 230 253 / 1)" : "#93c5fd",
                                 fontSize: "1.5rem",
-                                border: "1px solid rgb(186 230 253 / 1)"
+                                border: theme === 'light' ? "1px solid rgb(186 230 253 / 1)" : "1px solid #93c5fd"
                             }}
 
 
                         >
                             <h3 className="font-semibold capitalize">{item.title}</h3>
                             <p className="font-normal !mt-0">{item.location}</p>
-                            <p className="!mt-1 !font-normal text-gray-700">{item.description}</p>
+                            <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">{item.description}</p>
 
                         </VerticalTimelineElement>
                     </React.Fragment>

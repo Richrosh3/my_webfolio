@@ -39,7 +39,7 @@ export const experiencesData = [
     description:
       "Utilized React and React-Native to create a web/mobile application for a startup company called Memley.",
     icon: React.createElement(FaReact),
-    date: "2020-2021",
+    date: "2020 - 2021",
   },
   {
     title: "Graduated College",
@@ -55,7 +55,7 @@ export const experiencesData = [
     description:
       "Currently working as a software engineer at Northrop Grumman.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022-current",
+    date: "2022 - now",
   },
 ] as const;
 
