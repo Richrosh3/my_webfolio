@@ -25,7 +25,7 @@ export default function About() {
         </text>
         with a <text className="font-semibold">Bachelors </text>
         in <text className="font-semibold">Computer Engineering, </text>I was
-        fortunte to receive an offer from Northrop Grumman to work as a Software
+        fortunate to receive an offer from Northrop Grumman to work as a Software
         Engineer. As of now, I have been working for Northrop Grumman for a
         little over 1.5 years and have learned an extensive amount of material.
       </p>
@@ -51,7 +51,7 @@ export default function About() {
           interested in full-stack development
         </text>
         . At Northrop Grumman, I feel the same euphoric feeling after finishing
-        a difficult ticket, or seeing my work in action during a demonstration
+        a difficult task, or seeing my work in action during a demonstration
         to our customers.
       </p>
 
@@ -62,7 +62,7 @@ export default function About() {
       </p>
       <p className="mb-2">
         Outside of work, I've been really enjoying learning the guitar, watching movies, and playing a variety of sports.
-        One of my personal goals this year is to read 25 books by the end of the year. Currently at 23 out of 25!
+        One of my personal goals this year is to read 25 books by the end of the year. Currently at 24 out of 25!
         Since I no longer have homework to do or exams to study for, I have been enjoying reading so much more.
         Another one of my goals was to finish the Richmond Half Marathon, and I'm proud to say I completed it 🥳!!!
         I absolutely hate running for long periods of time, but I feel like I should at least finish one full marathon in
@@ -73,8 +73,8 @@ export default function About() {
         Some life-long goals I have are to obtain either a Masters or PhD; not because I'm a natural student,
         but because at some point I want to become a professor at a university. Sadly, the advanced degrees are the
         minimal requirement to become a professor at a university 😭. Alas, when the time comes, I will once again prevail
-        against the hardships of studying. I also want to own a cafe by the time I'm 50. I believe it would be a fulfilling
-        and rewarding endeavor, and a way I can give back to the community once I get my feet grounded.
+        against the hardships of studying. I also want to own a cafe by the time I'm 50. I just have a feeling it will be a 
+        fulfilling and rewarding endeavor, and a way I can give back to the community once I get my feet grounded.
       </p>
       <p>
         <text className="font-light italic">

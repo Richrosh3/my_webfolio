@@ -10,7 +10,7 @@ import { useTheme } from '@/context/theme-context';
 
 
 export default function Experience() {
-    const { ref, inView } = useSectionInView("Experience", .5);
+    const { ref, inView } = useSectionInView("Experience", .3);
     const { theme } = useTheme();
 
     return (

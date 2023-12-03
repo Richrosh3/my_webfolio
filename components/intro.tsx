@@ -54,7 +54,7 @@ export default function Intro() {
                         ✌
                     </motion.span>
                     <motion.span
-                        className="absolute bottom-0 right-1 text-4xl"
+                        className="absolute  bottom-0 end-4 text-4xl"
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
@@ -78,7 +78,7 @@ export default function Intro() {
                     Roshen
                 </span>
                 !{" "}I'm currently working as a {" "}
-                <span className="font-bold">
+                <span className="font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
                     Software Engineer {" "}
                 </span>
                 at {" "}
@@ -87,11 +87,11 @@ export default function Intro() {
                 </span>
                 .{" "}I am attempting to learn as many branches of programming as I can. {" "}
                 Currently, I'm learning {" "}
-                <span className="font-bold">
+                <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
                     Front-End Development {" "}
                 </span>
                 using {" "}
-                <span className="font-bold underline">
+                <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-[length:100%_6px] bg-no-repeat bg-bottom">
                     NextJS
                 </span>
                 .{" "} Join me in my journey!
