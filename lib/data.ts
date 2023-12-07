@@ -63,7 +63,7 @@ export const projectsData = [
   {
     title: "goodreads Web Scraper",
     description:
-      "I absolutely hate the goodreads UI/UX so I created an application to scrape the website. Eventually, I will create a book reviews page on this website!",
+      "I absolutely hate the goodreads UI/UX so I created an application to scrape the website since Goodreads stopped their API service. Eventually, I will create a book reviews page on this website!",
     tags: ["Python"],
     imageUrl: goodReads,
   },
