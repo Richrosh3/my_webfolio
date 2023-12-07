@@ -4,6 +4,7 @@ import React from 'react';
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Pagination, Spinner, getKeyValue } from "@nextui-org/react";
 import { useInfiniteScroll } from "@nextui-org/use-infinite-scroll";
 import { useAsyncList } from "@react-stately/data";
+import { goodReadsData } from '@/actions/parse-gr-data';
 
 export default function BookReviews() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -47,6 +48,10 @@ export default function BookReviews() {
 
   const [loaderRef, scrollerRef] = useInfiniteScroll({ hasMore, onLoadMore: list.loadMore });
 
+  const grData = goodReadsData();
+
+  console.log(grData);
+
   return (
     <div className='items-center justify-center'
     >
@@ -80,7 +85,10 @@ export default function BookReviews() {
           loadingContent={<Spinner color="white" />}
         >
           {(item) => (
-            <TableRow key={item.name}>
+            <TableRow 
+              key={item.name}
+              className='hover:bg-sky-100'
+            >
               {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
             </TableRow>
           )}
