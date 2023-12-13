@@ -6,10 +6,12 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import BookReviewsButton from '@/components/book-reviews-btn';
+import Header from "@/components/header";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
+      <Header />
       <Intro />
       <SectionDivider />
       <About />

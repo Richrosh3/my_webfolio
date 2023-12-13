@@ -71,24 +71,25 @@ export default function BookReviews() {
   };
 
   return (
-    <div className='items-center justify-center'
-    >
+    <div>
       <Table
         className='overflow-hidden'
         isHeaderSticky
         aria-label="GoodReads Data Table"
         classNames={{
-          base: "max-h-[520px] overflow-scroll",
+          base: "max-h-[700px]",
           table: "min-h-[400px]",
         }}
         sortDescriptor={sortDescriptor}
         onSortChange={handleSortChange}
       >
-        <TableHeader>
-          <TableColumn key="title" className='bg-sky-200' allowsSorting>Title</TableColumn>
-          <TableColumn key="author" className='bg-sky-200' allowsSorting>Author</TableColumn>
-          <TableColumn key="date_read" className='bg-sky-200' allowsSorting>Date Read</TableColumn>
-          <TableColumn key="overall_score" className='bg-sky-200' allowsSorting>Overall Rating</TableColumn>
+        <TableHeader 
+          columns={["Title", "Author", "Date Read", "Overall Rating"]}
+        >
+          <TableColumn key="title" className='bg-sky-200 text-center' allowsSorting align='end' width={500}>Title</TableColumn>
+          <TableColumn key="author" className='bg-sky-200 text-center pl-10' allowsSorting width={300}>Author</TableColumn>
+          <TableColumn key="date_read" className='bg-sky-200 text-center pl-9' allowsSorting width={300}>Date Read</TableColumn>
+          <TableColumn key="overall_score" className='bg-sky-200 text-center pl-10' allowsSorting width={300}>Overall Rating</TableColumn>
         </TableHeader>
         <TableBody
           isLoading={isLoading}
@@ -102,10 +103,10 @@ export default function BookReviews() {
                 key={item.title}
                 className='hover:bg-sky-100'
               >
-                <TableCell>{item.title}</TableCell>
-                <TableCell>{item.author}</TableCell>
-                <TableCell>{item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}</TableCell>
-                <TableCell>{item.overall_score}</TableCell>
+                <TableCell className="" >{item.title}</TableCell>
+                <TableCell className="text-center" >{item.author}</TableCell>
+                <TableCell className="text-center" >{item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}</TableCell>
+                <TableCell className="text-center">{item.overall_score}</TableCell>
               </TableRow>
             )
           }}
