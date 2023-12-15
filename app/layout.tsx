@@ -1,10 +1,8 @@
 import './globals.css'
-import Header from '@/components/header'
 import ActiveSectionContextProvider from '@/context/active-section-context'
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
 import { Toaster } from 'react-hot-toast'
-import Footer from '@/components/footer'
 import ThemeSwitch from '@/components/theme-switch'
 import ThemeContextProvider from '@/context/theme-context'
 import { Providers } from './providers'
@@ -37,7 +35,6 @@ export default function RootLayout({
           <ThemeContextProvider>
             <ActiveSectionContextProvider>
               {children}
-              <Footer />
               <Toaster position='bottom-left' />
               <ThemeSwitch />
             </ActiveSectionContextProvider>

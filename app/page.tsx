@@ -7,6 +7,7 @@ import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import BookReviewsButton from '@/components/book-reviews-btn';
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Experience />
       <Contact />
       <BookReviewsButton />
+      <Footer />
     </main>
   )
 }
