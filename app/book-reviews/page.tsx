@@ -7,7 +7,7 @@ import ReviewsHeader from './reviews-header'
 
 export default function page() {
   return (
-    <div>
+    <div className='dark:text-white/70'>
       <ReviewsHeader/>
       <BookReviewsTable/>
       <HomeButton/>

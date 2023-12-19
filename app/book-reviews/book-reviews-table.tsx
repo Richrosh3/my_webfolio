@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, SortDescriptor } from "@nextui-org/react";
+import Rating from '@mui/material/Rating'
 import { BookData, goodReadsData } from '@/actions/parse-gr-data';
 
 export default function BookReviewsTable() {
@@ -71,45 +72,95 @@ export default function BookReviewsTable() {
   };
 
   return (
-      <Table
-        className='overflow-hidden mb-[4rem]'
-        isHeaderSticky
-        aria-label="GoodReads Data Table"
-        classNames={{
-          base: "max-h-[700px]",
-          table: "min-h-[400px]",
-        }}
-        sortDescriptor={sortDescriptor}
-        onSortChange={handleSortChange}
+    <Table
+      className='overflow-hidden mb-[4rem]'
+      isHeaderSticky
+      aria-label="GoodReads Data Table"
+      classNames={{
+        base: "max-h-[700px]",
+        table: "min-h-[400px]",
+      }}
+      sortDescriptor={sortDescriptor}
+      onSortChange={handleSortChange}
+    >
+      <TableHeader
+        columns={["Title", "Author", "Date Read", "Overall Rating"]}
       >
-        <TableHeader 
-          columns={["Title", "Author", "Date Read", "Overall Rating"]}
+        <TableColumn key="title"
+          className='bg-sky-200 text-center dark:bg-gray-950 dark:border-black/40'
+          allowsSorting
+          align='end'
+          width={500}
         >
-          <TableColumn key="title" className='bg-sky-200 text-center' allowsSorting align='end' width={500}>Title</TableColumn>
-          <TableColumn key="author" className='bg-sky-200 text-center pl-10' allowsSorting width={300}>Author</TableColumn>
-          <TableColumn key="date_read" className='bg-sky-200 text-center pl-9' allowsSorting width={300}>Date Read</TableColumn>
-          <TableColumn key="overall_score" className='bg-sky-200 text-center pl-10' allowsSorting width={300}>Overall Rating</TableColumn>
-        </TableHeader>
-        <TableBody
-          isLoading={isLoading}
-          items={sortDescriptor ? sortData(sortDescriptor.column, reviews) : reviews}
-          loadingContent={<Spinner color="white" />}
+          Title
+        </TableColumn>
+        <TableColumn
+          key="author"
+          className='bg-sky-200 text-center pl-10 dark:bg-gray-950'
+          allowsSorting
+          width={300}>
+          Author
+        </TableColumn>
+        <TableColumn
+          key="date_read"
+          className='bg-sky-200 text-center pl-9 dark:bg-gray-950'
+          allowsSorting
+          width={300}
         >
-          {(item) => {
-            console.log(item)
-            return (
-              <TableRow
-                key={item.title}
-                className='hover:bg-sky-100'
-              >
-                <TableCell className="" >{item.title}</TableCell>
-                <TableCell className="text-center" >{item.author}</TableCell>
-                <TableCell className="text-center" >{item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}</TableCell>
-                <TableCell className="text-center">{item.overall_score}</TableCell>
-              </TableRow>
-            )
-          }}
-        </TableBody>
-      </Table>
+          Date Read
+        </TableColumn>
+        <TableColumn
+          key="stars"
+          className='bg-sky-200 text-center pl-4 dark:bg-gray-950'
+          width={300}
+        >
+          Stars
+        </TableColumn>
+        <TableColumn
+          key="overall_score"
+          className='bg-sky-200 text-center pl-10 dark:bg-gray-950'
+          allowsSorting
+          width={300}
+        >
+          Overall Rating
+        </TableColumn>
+      </TableHeader>
+      <TableBody
+        isLoading={isLoading}
+        items={sortDescriptor ? sortData(sortDescriptor.column, reviews) : reviews}
+        loadingContent={<Spinner color="white" />}
+      >
+        {(item) => {
+          console.log(item)
+          return (
+            <TableRow
+              key={item.title}
+              className='hover:bg-sky-100 hover:dark:bg-gray-950 hover:dark:border-black/40 hover:dark:bg-opacity-30'
+            >
+              <TableCell className="" >
+                {item.title}
+              </TableCell>
+              <TableCell className="text-center" >
+                {item.author}
+              </TableCell>
+              <TableCell className="text-center" >
+                {item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}
+              </TableCell>
+              <TableCell className="text-center">
+                <Rating name="star-rating"
+                  value={item.overall_score}
+                  precision={.1}
+                  readOnly
+                  size="large"
+                />
+              </TableCell>
+              <TableCell className="text-center">
+                {item.overall_score}
+              </TableCell>
+            </TableRow>
+          )
+        }}
+      </TableBody>
+    </Table>
   );
 }
