@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import goodReads from "@/public/goodReads.png";
 import onlineCasino from "@/public/onlineCasino.jpg"
+import webfolio from "@/public/webfolio.png"
 
 export const links = [
   {
@@ -61,9 +62,16 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Webfolio",
+    description:
+      "Got creative and made a web portfolio for myself! I really love the book reviews page since it's something I've been wanting to do for so long :)",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    imageUrl: webfolio,
+  },
+  {
     title: "goodreads Web Scraper",
     description:
-      "I absolutely hate the goodreads UI/UX so I created an application to scrape the website. Eventually, I will create a book reviews page on this website!",
+      "I absolutely hate the goodreads UI/UX so I created an application to scrape the website since Goodreads stopped their API service.",
     tags: ["Python"],
     imageUrl: goodReads,
   },
