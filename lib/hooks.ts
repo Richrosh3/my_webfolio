@@ -42,7 +42,6 @@ export function useFetch() {
     }
 
     const fetchCSVdata = async (filePath: string, callback: Callback) => {
-        console.log(filePath);
         const response = await fetch(filePath);
         const reader = response.body!.getReader();
         const result = await reader.read();

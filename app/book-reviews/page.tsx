@@ -7,7 +7,7 @@ import ReviewsHeader from './reviews-header'
 
 export default function page() {
   return (
-    <div className='dark:text-white/70'>
+    <div className='dark:text-white/70' suppressHydrationWarning={true}>
       <ReviewsHeader/>
       <BookReviewsTable/>
       <HomeButton/>

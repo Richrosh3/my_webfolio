@@ -84,7 +84,7 @@ export default function BookReviewsTable() {
       onSortChange={handleSortChange}
     >
       <TableHeader
-        columns={["Title", "Author", "Date Read", "Overall Rating"]}
+        columns={["Title", "Author", "Date Read", "Stars", "Overall Rating"]}
       >
         <TableColumn key="title"
           className='bg-sky-200 text-center dark:bg-gray-950 dark:border-black/40'
@@ -131,7 +131,6 @@ export default function BookReviewsTable() {
         loadingContent={<Spinner color="white" />}
       >
         {(item) => {
-          console.log(item)
           return (
             <TableRow
               key={item.title}
@@ -148,7 +147,7 @@ export default function BookReviewsTable() {
               </TableCell>
               <TableCell className="text-center">
                 <Rating name="star-rating"
-                  value={item.overall_score}
+                  value={typeof item.overall_score === 'number' ? item.overall_score : parseFloat(item.overall_score)}
                   precision={.1}
                   readOnly
                   size="large"
