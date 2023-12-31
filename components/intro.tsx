@@ -86,7 +86,15 @@ export default function Intro() {
                     Northrop Grumman
                 </span>
                 .{" "}I am attempting to learn as many branches of programming as I can. {" "}
-                Currently, I'm learning {" "}
+                At the moment, I'm learning {" "}
+                <span className="font-bold bg-gradient-to-r from-cyan-500 to-fuchsia-500 bg-clip-text text-transparent">
+                    Machine Learning {" "}
+                </span>
+                with {" "}
+                <span className="font-bold bg-gradient-to-r from-cyan-500 to-fuchsia-500 bg-[length:100%_6px] bg-no-repeat bg-bottom">
+                    Python
+                </span>
+                {" "}and {" "}
                 <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
                     Front-End Development {" "}
                 </span>

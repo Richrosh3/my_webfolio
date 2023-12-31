@@ -62,7 +62,7 @@ export default function About() {
       </p>
       <p className="mb-2">
         Outside of work, I've been really enjoying learning the guitar, watching movies, and playing a variety of sports.
-        One of my personal goals this year is to read 25 books by the end of the year. Currently at 24 out of 25!
+        One of my personal goals this year is to read 25 books by the end of the year and I am thrilled to say I completed the challenge!
         Since I no longer have homework to do or exams to study for, I have been enjoying reading so much more.
         Another one of my goals was to finish the Richmond Half Marathon, and I'm proud to say I completed it 🥳!!!
         I absolutely hate running for long periods of time, but I feel like I should at least finish one full marathon in
