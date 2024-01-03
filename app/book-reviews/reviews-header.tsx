@@ -18,7 +18,7 @@ export default function ReviewsHeader() {
           className='flex w-full items-center justify-center px-3 py-[6px] text-3xl font-extrabold'
         >
           📚 &nbsp;📖
-            <span className='bg-gradient-to-r from-rose-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-gradient bg-300% mx-5'>
+            <span className='bg-gradient-to-r from-rose-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-gradient bg-300% mx-2'>
               Roshen's Book Reviews
             </span>
           📖 &nbsp;📚
