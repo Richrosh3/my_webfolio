@@ -24,6 +24,8 @@ const formatDate = (dateString: string | null): Date | null => {
     return null;
 };
 
+
+
 export const extractOverallScore = (review: string): number | string => {
     const match = review.match(/Overall Score: (\d+(\.\d+)?)\/5/);
 

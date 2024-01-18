@@ -1,16 +1,16 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, SortDescriptor, useDisclosure, Modal, Button, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, SortDescriptor} from "@nextui-org/react";
 import Rating from '@mui/material/Rating'
 import { BookData, goodReadsData } from '@/actions/parse-gr-data';
+import ReviewModal from './review-modal';
 
 
 export default function BookReviewsTable() {
   const { reviews } = goodReadsData();
   const [isLoading, setIsLoading] = useState(false);
   const [sortDescriptor, setSortDescriptor] = useState<{ column: keyof BookData; direction: "ascending" | "descending" } | undefined>(undefined);
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
 
   useEffect(() => {
@@ -86,7 +86,7 @@ export default function BookReviewsTable() {
       onSortChange={handleSortChange}
     >
       <TableHeader
-        columns={["Title", "Author", "Date Read", "Stars", "Overall Rating"]}
+        columns={["Title", "Author", "Date Read", "Stars", "Overall Rating", "Review"]}
       >
         <TableColumn key="title"
           className='bg-sky-200 text-center dark:bg-gray-950 dark:border-black/40'
@@ -126,6 +126,13 @@ export default function BookReviewsTable() {
         >
           Overall Rating
         </TableColumn>
+        <TableColumn
+          key="review"
+          className='bg-sky-200 text-center dark:bg-gray-950'
+          width={300}
+        >
+          Review
+        </TableColumn>
       </TableHeader>
       <TableBody
         isLoading={isLoading}
@@ -134,70 +141,34 @@ export default function BookReviewsTable() {
       >
         {(item) => {
           return (
-            <>
-              <TableRow
-                key={item.title}
-                className='hover:bg-sky-100 hover:dark:bg-gray-950 hover:dark:border-black/40 hover:dark:bg-opacity-30'
-                onClick={onOpen}
-              >
-                <TableCell className="" >
-                  {item.title}
-                </TableCell>
-                <TableCell className="text-center" >
-                  {item.author}
-                </TableCell>
-                <TableCell className="text-center" >
-                  {item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}
-                </TableCell>
-                <TableCell className="text-center">
-                  <Rating name="star-rating"
-                    value={typeof item.overall_score === 'number' ? item.overall_score : parseFloat(item.overall_score)}
-                    precision={.1}
-                    readOnly
-                    size="large"
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-                  {item.overall_score}
-                </TableCell>
-              </TableRow>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-                <ModalContent>
-                  {(onClose) => (
-                    <>
-                      <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
-                      <ModalBody>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Nullam pulvinar risus non risus hendrerit venenatis.
-                          Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Nullam pulvinar risus non risus hendrerit venenatis.
-                          Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                        </p>
-                        <p>
-                          Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
-                          dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis.
-                          Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod.
-                          Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur
-                          proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
-                        </p>
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button color="danger" variant="light" onPress={onClose}>
-                          Close
-                        </Button>
-                        <Button color="primary" onPress={onClose}>
-                          Action
-                        </Button>
-                      </ModalFooter>
-                    </>
-                  )}
-                </ModalContent>
-              </Modal>
-            </>
+            <TableRow
+              key={item.title}
+              className='hover:bg-sky-100 hover:dark:bg-gray-950 hover:dark:border-black/40 hover:dark:bg-opacity-30'
+            >
+              <TableCell className="" >
+                {item.title}
+              </TableCell>
+              <TableCell className="text-center" >
+                {item.author}
+              </TableCell>
+              <TableCell className="text-center" >
+                {item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}
+              </TableCell>
+              <TableCell className="text-center">
+                <Rating name="star-rating"
+                  value={typeof item.overall_score === 'number' ? item.overall_score : parseFloat(item.overall_score)}
+                  precision={.1}
+                  readOnly
+                  size="large"
+                />
+              </TableCell>
+              <TableCell className="text-center">
+                {item.overall_score}
+              </TableCell>
+              <TableCell className="text-center">
+                <ReviewModal {...item}/>
+              </TableCell>
+            </TableRow>
           )
         }}
 
