@@ -89,7 +89,7 @@ export default function BookReviewsTable() {
         columns={["Title", "Author", "Date Read", "Stars", "Overall Rating", "Review"]}
       >
         <TableColumn key="title"
-          className='bg-sky-200 text-center dark:bg-gray-950 dark:border-black/40'
+          className='bg-sky-200 text-center dark:bg-gray-950'
           allowsSorting
           align='end'
           width={500}

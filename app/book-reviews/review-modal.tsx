@@ -16,7 +16,7 @@ export default function ReviewModal(book: BookData) {
 
     return (
         <React.Fragment>
-            <Button onPress={onOpen}>📖</Button>
+            <Button onPress={onOpen} className="bg-sky-200/60 px-3 py-3 rounded-full outline-none dark: dark:bg-gray-950/50">📖📃📚</Button>
             <Modal
                 backdrop="blur"
                 isOpen={isOpen}
@@ -25,9 +25,7 @@ export default function ReviewModal(book: BookData) {
                 size="lg"
                 classNames={{
                     backdrop: "backdrop-opacity-50",
-                    base: "bg-gradient-to-b from-violet-50 to-blue-200 dark:bg-[#19172c] text-black/80",
-                    header: "",
-                    footer: "",
+                    base: "bg-gradient-to-b from-violet-50 to-blue-200 text-black/80",
                 }}
                 scrollBehavior="inside"
                 className="h-[80vh] rounded-3xl"
