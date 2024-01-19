@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, SortDescriptor } from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, SortDescriptor} from "@nextui-org/react";
 import Rating from '@mui/material/Rating'
 import { BookData, goodReadsData } from '@/actions/parse-gr-data';
+import ReviewModal from './review-modal';
+
 
 export default function BookReviewsTable() {
   const { reviews } = goodReadsData();
@@ -84,10 +86,10 @@ export default function BookReviewsTable() {
       onSortChange={handleSortChange}
     >
       <TableHeader
-        columns={["Title", "Author", "Date Read", "Stars", "Overall Rating"]}
+        columns={["Title", "Author", "Date Read", "Stars", "Overall Rating", "Review"]}
       >
         <TableColumn key="title"
-          className='bg-sky-200 text-center dark:bg-gray-950 dark:border-black/40'
+          className='bg-sky-200 text-center dark:bg-gray-950'
           allowsSorting
           align='end'
           width={500}
@@ -124,6 +126,13 @@ export default function BookReviewsTable() {
         >
           Overall Rating
         </TableColumn>
+        <TableColumn
+          key="review"
+          className='bg-sky-200 text-center dark:bg-gray-950'
+          width={300}
+        >
+          Review
+        </TableColumn>
       </TableHeader>
       <TableBody
         isLoading={isLoading}
@@ -156,9 +165,13 @@ export default function BookReviewsTable() {
               <TableCell className="text-center">
                 {item.overall_score}
               </TableCell>
+              <TableCell className="text-center">
+                <ReviewModal {...item}/>
+              </TableCell>
             </TableRow>
           )
         }}
+
       </TableBody>
     </Table>
   );
