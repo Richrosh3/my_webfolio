@@ -23,6 +23,14 @@ export const reviewCorrection = (book: BookData): BookData => {
             book.overall_score = extractOverallScore(book.review);
             break;
         }
+        case "A ​Court of Silver Flames (A Court of Thorns and Roses, #4)":
+            book.review = ACourtOfSilverFlames;
+            book.overall_score = extractOverallScore(book.review);
+            break;
+        case "Golden Son (Red Rising Saga, #2)":
+            book.review = GoldenSun;
+            book.overall_score = extractOverallScore(book.review);
+            break;
         default: {
             book.review = book.review;
             break;
@@ -99,3 +107,30 @@ I'll probably read this again at some point in my life when I feel smarter.
 
 Overall Score: 3.0/5`
 
+const GoldenSun = `I have to say this is easily becoming one of my favorite series 🤩
+
+Darrow is becoming such a complex character with multiple internal battles and he can't seem to figure out how to navigate any of them besides becoming the glorious warrior he was created to be. From the start of this novel, we see Darrow have the biggest fall from grace since winning the Passage and graduating from the Institute. He is cast aside like an animal on the street and Nero literally ignores him the whole time. At first you're kinda confused on why Nero switched up on him like that, but you get it as you keep reading and it becomes important to Darrow's redemption. 
+
+At his lowest status among the Golds, he puts on such an amazing act that leaves you enthralled as you read because it becomes the start of soooo much more. It becomes the turning point of friendships, redemptions, betrayals, and most of all, war. The thing is, Darrow doesn't even want to be this warrior of legend that wins the war; but he has to be. Otherwise, all the previous deaths would mean nothing, and his people would suffer the most. 
+
+The only thing I dislike about my whole reading experience is that I get so sad when the side characters I actually enjoy end up dying to become fodder for Darrow's loss. I mean its absolutely needed, but that doesn't mean I don't feel empty inside once they do. Even in the last book, the deaths were necessary for Darrow's growth but man does it suck. What's even crazier is that the majority of them are Gold's, but you kind of forget about how many LowColors actually die. In one the excursions, I think Darrow said literally thousands of LowColors died, but then we immediately move on to some other scene in the next sentence. However, because he is interacting with more LowColors, we are seeing more developed relationships with new LowColor characters as well; which I really like. 
+
+I feel like so much happened in this book, and the ending was way better paced compared to the last book. You don't entirely know what gonna happen, but the feeling of knowing what's going to eventually occur is sprinkled around in the book. The surprise factor is still there and it's a big one.
+
+I seriously can't get enough of this series!
+
+Overall Score: 4.9/5`
+
+const ACourtOfSilverFlames = `Need me a Nesta in my life fr fr 😩
+
+I very much love to see the fall of a character into an eternal demise, but it is very rare that I get to enjoy a character rising to glory. The lack of crazy action in the first 3 parts of the book compared to the last three books didn't turn me away at all. 
+
+Being able to witness Nesta's gradual change, both the ups and the downs, was very enticing. Lowkey I needed a break from the Feyre & Rhysand interactions cuz it was always so perfect, which made me enjoy the chaotic situations/ banter that came with Nesta & Cassian. The slow and GRUELING growth in friendship between Nesta and Cassian is just immaculate. Although they also had the "love at first sight" thing going for them, it was not a smooth process at all. I found it to be admirable that Cassian was always a friend first rather than just a dude that is obsessed with Nesta. The growth in friendships between Gwyn, Emerie, and Nesta were so pure; all facing past tragedies and learning to face them together. The whole bringing back the Valkyrie thing was sick too, the title itself just radiates with power and resilience. Inserting the trio into the Blood Rite was thrilling and really brought out the parallelism to our Illyrian homies. I just wish the Blood Rite was a bit longer, that the trio won together, and the ending of the Blood Rite focused solely on them winning. 
+
+I totally agree with Taneen and Jules. Like wtf was the last 50 pages of this book? Why did we speed run the Blood Rite, the interaction with the queen, and the birth of Nyx??? I would have loved way more detail in the Blood Rite and feel like them winning the Blood Rite would have been a perfect ending to the book. I'm realizing that introducing the villain right at the end of the book and then having them die immediately is a habit of Mrs. Maas. It just doesn't make sense to me to see so much build up and have them "fight" and die within the span of a paragraph. Like this could have been done in the next book and I would have been fine with that. And then for some reason we immediately jump right to Feyre delivering a baby? The description of Nesta becoming the most powerful being in the universe for a brief second and then sacrificing her power was so beautiful, but this will also just get muddled into the mess of the Blood Rite, death of the queen, and birth of Nyx. In my head the perfect ending would have been a celebration of the trio winning the Blood Rite and then a mating ceremony for Nesta and Cassian. 
+
+I do miss the homie interactions though. Like where is Mor? She's kinda just stuck in a location we barely know about. Even with the small amount of content we got with her, I did like the possible foreshadowing between her and Emerie ;) BUT WHEN WILL THE TIME COME FOR MY BOY AZ. HE DESERVES A CHANCE PLEASEEE
+
+Ignoring the last ~50 pages of the book lol, I was thoroughly entertained by every chapter. I am putting this slightly above ACOMAF just based on the best character development I have seen in a long, long time. Very much looking forward to whenever book 5 comes out :D
+
+Overall Score: 4.85/5`

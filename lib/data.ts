@@ -54,9 +54,17 @@ export const experiencesData = [
     title: "Software Engineer",
     location: "Baltimore, MD",
     description:
-      "Currently working as a software engineer at Northrop Grumman.",
+      "Mainly assisted in creating an OS and embedded software for a communication device used on ships, jets, and land bases.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - now",
+    date: "2022 - 2023",
+  },
+  {
+    title: "Senior Associate Software Engineer",
+    location: "McLean, VA",
+    description:
+      "Currently working as a software engineer at Capital One!",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - now",
   },
 ] as const;
 
