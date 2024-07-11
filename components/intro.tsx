@@ -83,7 +83,7 @@ export default function Intro() {
                 </span>
                 at {" "}
                 <span className="font-bold bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-transparent bg-clip-text">
-                    Northrop Grumman
+                    Capital One
                 </span>
                 .{" "}I am attempting to learn as many branches of programming as I can. {" "}
                 At the moment, I'm learning {" "}

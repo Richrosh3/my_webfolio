@@ -25,9 +25,9 @@ export default function About() {
         </text>
         with a <text className="font-semibold">Bachelors </text>
         in <text className="font-semibold">Computer Engineering, </text>I was
-        fortunate to receive an offer from Northrop Grumman to work as a Software
-        Engineer. As of now, I have been working for Northrop Grumman for a
-        little over 1.5 years and have learned an extensive amount of material.
+        fortunate to receive an offer to work as a Software Engineer at Northrop 
+        Grumman. During my time at NG, I learned a lot about embedded software
+        and had more hands on experience with FPGA boards than I ever did in college!
       </p>
       <p className="mb-2">
         <text className="font-light italic">
@@ -35,7 +35,7 @@ export default function About() {
           focus on software engineering?" <br></br>Good question!
         </text>
       </p>
-      <p className="mb-7">
+      <p className="mb-4">
         {" "}
         Well, during the pandemic, I worked as a{" "}
         <text className="font-semibold">front-end developer </text>
@@ -54,22 +54,30 @@ export default function About() {
         a difficult task, or seeing my work in action during a demonstration
         to our customers.
       </p>
+      
+      <p>
+          Currently, I am working as a Senior Associate Software Engineer at Capital One! My main role now
+          includes more backend and data engineering work for an internal application, which I'm really excited 
+          to do. Capital One is a lot more fast paced compared to Northrop Grumman, but I feel like my learning 
+          potential has increased exponentially. I'm really excited to be working here!
+      </p>
 
-      <p className="mb-7">
+      <p className="mt-4 mb-4">
         <text className="font-light italic">
           Anyways, enough of my professional side!
         </text>
       </p>
       <p className="mb-2">
         Outside of work, I've been really enjoying learning the guitar, watching movies, and playing a variety of sports.
-        One of my personal goals this year is to read 25 books by the end of the year and I am thrilled to say I completed the challenge!
-        Since I no longer have homework to do or exams to study for, I have been enjoying reading so much more.
-        Another one of my goals was to finish the Richmond Half Marathon, and I'm proud to say I completed it 🥳!!!
+        One of my personal goals of 2023 was to read 25 books by the end of the year and I am thrilled to say I completed the challenge!
+        Since I no longer have homework to do or exams to study for, I have been enjoying reading so much more. Take a look at the books 
+        that I've read by clicking on the book button!
+        Another one of my goals was to finish the Richmond Half Marathon, and I'm proud to say I finished the race 🥳!!!
         I absolutely hate running for long periods of time, but I feel like I should at least finish one full marathon in
         my lifetime. The Richmond Half Marathon felt so rewarding to finish, so I'm sure I'll feel even more ecstatic if I
-        complete a full marathon.
+        complete a full marathon. For now, I'll continue with half-marathons and 5k's.
       </p>
-      <p className="mb-5">
+      <p className="mt-4 mb-4">
         Some life-long goals I have are to obtain either a Masters or PhD; not because I'm a natural student,
         but because at some point I want to become a professor at a university. Sadly, the advanced degrees are the
         minimal requirement to become a professor at a university 😭. Alas, when the time comes, I will once again prevail

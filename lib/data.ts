@@ -56,7 +56,7 @@ export const experiencesData = [
     description:
       "Mainly assisted in creating an OS and embedded software for a communication device used on ships, jets, and land bases.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - 2023",
+    date: "2022 - 2024",
   },
   {
     title: "Senior Associate Software Engineer",
@@ -64,7 +64,7 @@ export const experiencesData = [
     description:
       "Currently working as a software engineer at Capital One!",
     icon: React.createElement(CgWorkAlt),
-    date: "2023 - now",
+    date: "2024 - now",
   },
 ] as const;
 
