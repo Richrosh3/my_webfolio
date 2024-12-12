@@ -31,6 +31,22 @@ export const reviewCorrection = (book: BookData): BookData => {
             book.review = GoldenSun;
             book.overall_score = extractOverallScore(book.review);
             break;
+        case "Morning Star (Red Rising Saga, #3)":
+            book.review = MorningStar;
+            book.overall_score = extractOverallScore(book.review);
+            break;
+        case "The Sword of Kaigen":
+            book.review = TheSwordOfKaigen;
+            book.overall_score = extractOverallScore(book.review);
+            break;
+        case "Heaven":
+            book.review = Heaven;
+            book.overall_score = extractOverallScore(book.review);
+            break;
+        case "Iron Gold (Red Rising Saga, #4)":
+            book.review = IronGold;
+            book.overall_score = extractOverallScore(book.review);
+            break;
         default: {
             book.review = book.review;
             break;
@@ -134,3 +150,59 @@ I do miss the homie interactions though. Like where is Mor? She's kinda just stu
 Ignoring the last ~50 pages of the book lol, I was thoroughly entertained by every chapter. I am putting this slightly above ACOMAF just based on the best character development I have seen in a long, long time. Very much looking forward to whenever book 5 comes out :D
 
 Overall Score: 4.85/5`
+
+const MorningStar = `This whole book was a huge dopamine rush that you wish would never end. Alas, this is the end of the first trilogy of the Red Rising saga, so I'm a bit sad as the role of the Reaper seems to be coming to an end :(
+
+The end of Golden Son was a huge surprise and spawns many questions as to how and why it happened. Morning Star starts with Darrow at his lowest point since becoming a Gold, but he holds on and eventually comes out of this gruesome situation. I was very disappointed in Darrow during part 1 of the book since his rash decisions had severe consequences, even though he had just been saved and was not in the right mind. 
+
+Apart from that, Darrow was great in this book. He finally understands he can't do this alone, and he actually seeks help and guidance from his friends as equals. I was genuinely missing the theatric Darrow that we saw at the Institute or from the Gala dinner, but Sevro made it up with his own grand theatrics for sure 😮‍💨 and not just once! Darrow's and Sevro's relationship was actually really cute throughout the whole book. It's like Darrow could finally be himself fully and Sevro understood what responsibilities/hardships Darrow had to take on in the previous books. 
+
+So many new and reoccurring characters from previous books had big impacts throughout the novel, which I thought was very cool. We saw a whole new side to the solar system and how their views differ from the Lunarian Golds. We also lost some characters, but man these one's hurt so much more compared to the last books. Near the end I was almost in complete shock and not just from the action. 
+
+Something I wish was discussed upon more was Darrow's trauma after being tortured for months on end. They kind of sprinkle mentions of it here and there in part 1, but it seemed like something he got over without it being detailed in the book. It would've been nice to see him build himself up emotionally/mentally as well and not just his physical attributes.
+
+The ending of this book was all about conflict resolution; and very promptly might I add. Darrow had a whole armada ready to finish the war, but we only saw it from the perspective of about 4 characters. The resolution was very phenomenal, and I loved all the action and dialogue that went on; but it also felt like a rather quick end to years of antagonism. I mean two of his biggest threats were taken out without much of a fight from either of the individuals themselves. Still a great scene! But something I believe should have deserved way more. I even think Brown could have created a whole book just to solve all this discord. It may have been a short book, but the resolution to all the war would have gotten a more extensive and descriptive ending. 
+
+From what I've heard, the next books don't focus on Darrow as much, but still have him as the main protagonist to tie everything together. Seems like a Feyre and ACOTAR type of situation, so I'm a bit hopeful of the story being just as good in the next trilogy. 
+
+On to the next!
+
+Overall Score: 4.91/5`
+
+const TheSwordOfKaigen = `This is literally Babel but with actual magic 🤐
+
+Don't worry I actually liked Babel, but the magic part was lackluster for me. In this book, the magic is basically Avatar the Last Airbender vibes, but also with pure-bred families that can access secret techniques. Mamoru, one of our main characters, is a prodigy trying to master his families secret technique. His clan is known to be old-fashioned and as wholly dedicated warriors for their empire. Misaki, our second main character and also Mamoru's mom, is a former badass but now a high class house wife longing for purpose. For the majority of their interactions, their relationship seems professional. Idk if its because they're from high class families, if Mamoru holds himself to warrior standards, or if Misaki is just uncomfortable around him, but it's definitely a weird dynamic that plays a huge part in the emotions you feel. 
+
+This book is said to be about war. The crazy thing is that the war, and the things leading up to it, were the most boring parts of the book. This book is really about grief, healing, and relationships. I was lowkey disappointed in the beginning of the book just cuz it wasn't at all what I expected it to be. I thought this was a story of Mamoru discovering lies from the empire, revealing secrets to the public, and causing a civil war with Avatar type benders. I could care less about the war, but it was definitely necessary to define relationships, expose trauma/secrets, and create new opportunities. I can't stress the sudden rush of emotions displayed in chapters after reading so many pages of war. 
+
+The book itself is a standalone novel and Miss Wang declared there to be no plans for a sequel at the moment. But there is so much more to explore with the plot and among the characters that a sequel feels almost necessary. Hoping she changes her mind in the future!
+
+Overall Score: 4.3/5`
+
+const Heaven = `That was like really, really raw... 😶
+
+Our main character, who I just realized doesn't actually have a name, gets a note from Kojima, a girl in his class. Both of them, bullied for various reasons, seek solace in each other for understanding what it's like to be different. Our main character gets constantly beat up pretty bad. Kojima does get physically harassed, but not similar to the daily torture the MC faces. 
+
+That's pretty much the whole basis of the book. 
+
+There's a lot of bullying and at times it can get really hard to read. Even the end was barely a win because so much still goes on in our MC's life. 
+
+There's some philosophical nuances in this book. Our MC is the type of character that is righteous and pure at all times, even at the cost of their health and sanity. One of the characters, Momose, is the arbiter of good vs. evil in the book. It's kind of scary at how the things he says lowkey make sense; even among the midst of all the bad things that we witnessed happen to our MC. It's even more terrifying that the character is a teenager that basically lives for a chaotic neutral lifestyle and understands that the repercussions don't mean much in the grand scheme of things. Kojima has her own understanding of self-righteousness. It's nice to see that she is so firm on her beliefs and that she gives comfort to our MC. But I believe there is a turning point in the story where she goes from a symbol of hope to an object of desolation. It happens over something we would consider so nominal, but it occurs rapidly. 
+
+This book kinda reminded me of <i>Perks of Being a Wallflower</i>, except our MC is like 10 times as miserable. Both stories give off the same vibe of childhood despair that make it really raw and emotional. 
+
+solid read but idk if i would wanna read it again tbh. 
+
+Overall Score: 3.7/5`
+
+const IronGold = `Originally, I thought the story of Darrow ended with book 3, which was kind of unsettling. It's good to know that his story is not finished, even though his worth as a character within this book was pathetic. 
+
+I really liked how multiple viewpoints were portrayed in this book. It's kind of like how <i>Kafka On the Shore</i> bounces around the narration of two different characters. In this book, we circulate between Lyria, Ephraim, Lysander, and Darrow. I'm a huge, huge, huge fan of bringing Ephraim into the story as a widowed husband of Trigg and going rogue after feeling resentful towards the Society and Darrow after the Rising. His story feels the most compelling and it's amazing that Trigg's story continues through him so neither become a throwaway character after book 3. Lyria seems to be our Darrow 2.0 but without the plot armor. Her connection into the main story was brilliant and I'm hoping she becomes an important character. Lysander's new plotline is... idk pretentious I guess? It's like he finds a new purpose from the death of others and isn't killed himself because his name is essential to the oncoming story. I'm kinda mad at him cuz I would've been okay with him dying if it meant another lived. Darrow was so annoying in this book. No redeeming qualities. Even at the end of the book, he makes another terrible decision. Our Reaper is not the same as he used to be. But he's at the bottom of the bottom now so maybe he'll rise again. 
+
+This book wasn't as amazing as any in the first trilogy, but since it's the start of a new saga, I'll give it some grace. New stories were developed, characters old and new were given new plotlines, and we were given a much deeper understanding of what happened after the Rising. I'm very interested in the damage the Rising caused and what came forth. The Syndicate is a prime example of an amazing plotline being developed from the violence and corruption that ensued after the chaos of the Rising. Planets, governments, and societies were broken and needed to be rebuilt from the ground up. Sometimes it may be evil forces that build that structure again which is why the concept of the Syndicate is exciting. 
+
+Joe, I don't think you would've liked this one just cuz it's not as structured as book 1 was. I think you still would've read through the series anyways just so we could've talked about it. Miss you buddy <3
+
+From this book, I'm not like entirely excited as I was from book 1 of the first trilogy, but I am still interested to see the development of these stories and want to see the interactions between specific characters. 
+
+Overall Score: 4.25/5`
