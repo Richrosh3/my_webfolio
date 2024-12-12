@@ -20,36 +20,36 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-2">
         After graduating from the{" "}
-        <text className="font-semibold">
+        <span className="font-semibold">
           University of Maryland, College Park{" "}
-        </text>
-        with a <text className="font-semibold">Bachelors </text>
-        in <text className="font-semibold">Computer Engineering, </text>I was
+        </span>
+        with a <span className="font-semibold">Bachelors </span>
+        in <span className="font-semibold">Computer Engineering, </span>I was
         fortunate to receive an offer to work as a Software Engineer at Northrop 
         Grumman. During my time at NG, I learned a lot about embedded software
         and had more hands on experience with FPGA boards than I ever did in college!
       </p>
       <p className="mb-2">
-        <text className="font-light italic">
+        <span className="font-light italic">
           Now, you may ask yourself, "why did he decide to split paths and solely
           focus on software engineering?" <br></br>Good question!
-        </text>
+        </span>
       </p>
       <p className="mb-4">
         {" "}
         Well, during the pandemic, I worked as a{" "}
-        <text className="font-semibold">front-end developer </text>
+        <span className="font-semibold">front-end developer </span>
         for a startup company. In this position, I fell in{" "}
-        <text className="font-semibold underline">love</text> with working with
+        <span className="font-semibold underline">love</span> with working with
         a dedicated team of engineers, UI/UX designers, and the CEO of the
         company. The goal of the company was to create a mobile and web
         application that would allow affordable and accessible education to students all over
         the US. It was an amazing feeling to be able to see the work I had put
         in being used by various users. I began focusing on software engineering
         at that point, and specifically became more{" "}
-        <text className="font-semibold underline">
+        <span className="font-semibold underline">
           interested in full-stack development
-        </text>
+        </span>
         . At Northrop Grumman, I feel the same euphoric feeling after finishing
         a difficult task, or seeing my work in action during a demonstration
         to our customers.
@@ -63,9 +63,9 @@ export default function About() {
       </p>
 
       <p className="mt-4 mb-4">
-        <text className="font-light italic">
+        <span className="font-light italic">
           Anyways, enough of my professional side!
-        </text>
+        </span>
       </p>
       <p className="mb-2">
         Outside of work, I've been really enjoying learning the guitar, watching movies, and playing a variety of sports.
@@ -85,9 +85,9 @@ export default function About() {
         fulfilling and rewarding endeavor, and a way I can give back to the community once I get my feet grounded.
       </p>
       <p>
-        <text className="font-light italic">
+        <span className="font-light italic">
           Hope you learned a bit about me :)
-        </text>
+        </span>
       </p>
     </motion.section>
   );
