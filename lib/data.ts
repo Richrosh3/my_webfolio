@@ -43,7 +43,7 @@ export const experiencesData = [
     date: "2020 - 2021",
   },
   {
-    title: "Graduated College",
+    title: "Bachelors Complete!",
     location: "College Park, MD",
     description:
       "Graduated from the University of Maryland, College Park with a Bachelors in Computer Engineering!",
@@ -65,6 +65,14 @@ export const experiencesData = [
       "Currently working as a software engineer at Capital One!",
     icon: React.createElement(CgWorkAlt),
     date: "2024 - now",
+  },
+  {
+    title: "Started Master's Program",
+    location: "Georgia Tech",
+    description:
+      "Began Master's in Computer Science at Georgia Tech",
+    icon: React.createElement(LuGraduationCap),
+    date: "2025 - now",
   },
 ] as const;
 

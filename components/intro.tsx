@@ -78,12 +78,16 @@ export default function Intro() {
                     Roshen
                 </span>
                 !{" "}I'm currently working as a {" "}
-                <span className="font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+                <span className="font-bold bg-gradient-to-r from-blue-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
                     Software Engineer {" "}
                 </span>
                 at {" "}
-                <span className="font-bold bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-transparent bg-clip-text">
+                <span className="font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-violet-600 text-transparent bg-clip-text">
                     Capital One
+                </span>
+                {" "}and a Graduate Student at {" "}
+                <span className="font-bold bg-gradient-to-r from-blue-400 via-blue-400 to-indigo-400 text-transparent bg-clip-text">
+                    Georgia Tech
                 </span>
                 .{" "}I am attempting to learn as many branches of programming as I can. {" "}
                 At the moment, I'm learning {" "}
