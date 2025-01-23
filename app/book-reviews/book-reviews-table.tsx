@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, SortDescriptor} from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, SortDescriptor} from "@heroui/react";
 import Rating from '@mui/material/Rating'
 import { BookData, goodReadsData } from '@/actions/parse-gr-data';
 import ReviewModal from './review-modal';
