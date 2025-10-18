@@ -10,7 +10,7 @@ import ReviewModal from './review-modal';
 export default function BookReviewsTable() {
   const { reviews } = goodReadsData();
   const [isLoading, setIsLoading] = useState(false);
-  const [sortDescriptor, setSortDescriptor] = useState<{ column: keyof BookData; direction: "ascending" | "descending" } | undefined>(undefined);
+  const [sortDescriptor, setSortDescriptor] = useState<{ column: keyof BookData; direction: "ascending" | "descending" }>({ column: 'date_read', direction: 'descending' });
 
 
   useEffect(() => {
@@ -74,105 +74,122 @@ export default function BookReviewsTable() {
   };
 
   return (
-    <Table
-      className='overflow-hidden mb-[4rem]'
-      isHeaderSticky
-      aria-label="GoodReads Data Table"
-      classNames={{
-        base: "max-h-[700px]",
-        table: "min-h-[400px]",
-      }}
-      sortDescriptor={sortDescriptor}
-      onSortChange={handleSortChange}
-    >
-      <TableHeader
-        columns={["Title", "Author", "Date Read", "Stars", "Overall Rating", "Review"]}
-      >
-        <TableColumn key="title"
-          className='bg-sky-200 text-center dark:bg-gray-950'
-          allowsSorting
-          align='start'
-          width={500}
-        >
-          Title
-        </TableColumn>
-        <TableColumn
-          key="author"
-          className='bg-sky-200 text-center pl-10 dark:bg-gray-950'
-          allowsSorting
-          width={300}>
-          Author
-        </TableColumn>
-        <TableColumn
-          key="date_read"
-          className='bg-sky-200 text-center pl-9 dark:bg-gray-950'
-          allowsSorting
-          width={300}
-        >
-          Date Read
-        </TableColumn>
-        <TableColumn
-          key="stars"
-          className='bg-sky-200 text-center pl-4 dark:bg-gray-950'
-          width={300}
-        >
-          Stars
-        </TableColumn>
-        <TableColumn
-          key="overall_score"
-          className='bg-sky-200 text-center pl-10 dark:bg-gray-950'
-          allowsSorting
-          width={300}
-        >
-          Overall Rating
-        </TableColumn>
-        <TableColumn
-          key="review"
-          className='bg-sky-200 text-center dark:bg-gray-950'
-          width={300}
-        >
-          Review
-        </TableColumn>
-      </TableHeader>
-      <TableBody
-        isLoading={isLoading}
-        items={sortDescriptor ? sortData(sortDescriptor.column, reviews) : reviews}
-        loadingContent={<Spinner color="white" />}
-      >
-        {(item) => {
-          return (
-            <TableRow
-              key={item.title}
-              className='hover:bg-sky-100 hover:dark:bg-gray-950 hover:dark:border-black/40 hover:dark:bg-opacity-30'
-            >
-              <TableCell className="" >
-                {item.title}
-              </TableCell>
-              <TableCell className="text-center" >
-                {item.author}
-              </TableCell>
-              <TableCell className="text-center" >
-                {item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}
-              </TableCell>
-              <TableCell className="text-center">
-                <Rating name="star-rating"
-                  value={typeof item.overall_score === 'number' ? item.overall_score : parseFloat(item.overall_score)}
-                  precision={.1}
-                  readOnly
-                  size="large"
-                />
-              </TableCell>
-              <TableCell className="text-center">
-                {item.overall_score}
-              </TableCell>
-              <TableCell className="text-center">
-                <ReviewModal {...item}/>
-              </TableCell>
-            </TableRow>
-          )
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Table
+        className='overflow-hidden mb-[4rem] shadow-2xl rounded-2xl'
+        isHeaderSticky
+        aria-label="GoodReads Data Table"
+        classNames={{
+          base: "max-h-[700px] bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-2xl",
+          table: "min-h-[400px]",
+          thead: "[&>tr]:first:rounded-t-2xl sticky top-0 z-10",
+          th: "bg-gradient-to-r from-blue-100 via-indigo-50 to-blue-100 dark:from-gray-700 dark:via-gray-800 dark:to-gray-700 text-gray-900 dark:text-gray-100 font-bold text-base tracking-wide text-center border-b-2 border-gray-200 dark:border-gray-600 backdrop-blur-lg first:rounded-tl-2xl last:rounded-tr-2xl",
+          td: "py-4 text-gray-700 dark:text-gray-300",
+          tr: "hover:bg-gradient-to-r hover:from-blue-50/50 hover:to-indigo-50/50 dark:hover:from-gray-800/50 dark:hover:to-gray-700/50 transition-all duration-200"
         }}
-
-      </TableBody>
-    </Table>
+        sortDescriptor={sortDescriptor}
+        onSortChange={handleSortChange}
+      >
+        <TableHeader>
+          <TableColumn 
+            key="title"
+            allowsSorting
+            className="text-center px-6 py-5"
+          >
+            Title
+          </TableColumn>
+          <TableColumn
+            key="author"
+            allowsSorting
+            className="text-center px-4 py-5"
+          >
+            Author
+          </TableColumn>
+          <TableColumn
+            key="date_read"
+            allowsSorting
+            className="text-center px-4 py-5"
+          >
+            Date Read
+          </TableColumn>
+          <TableColumn
+            key="stars"
+            className="text-center px-4 py-5"
+          >
+            Stars
+          </TableColumn>
+          <TableColumn
+            key="overall_score"
+            allowsSorting
+            className="text-center px-4 py-5"
+          >
+            Rating
+          </TableColumn>
+          <TableColumn
+            key="review"
+            className="text-center px-4 py-5"
+          >
+            Review
+          </TableColumn>
+        </TableHeader>
+        <TableBody
+          isLoading={isLoading}
+          items={sortDescriptor ? sortData(sortDescriptor.column, reviews) : sortData('date_read', reviews)}
+          loadingContent={<Spinner color="primary" size="lg" />}
+        >
+          {(item) => {
+            return (
+              <TableRow
+                key={item.title}
+                className="border-b border-gray-100 dark:border-gray-800 transition-colors duration-200"
+              >
+                <TableCell className="px-6 py-4 font-medium">
+                  <div className="max-w-xs truncate">
+                    {item.title}
+                  </div>
+                </TableCell>
+                <TableCell className="text-center px-4 py-4">
+                  <div className="font-medium text-gray-900 dark:text-gray-100">
+                    {item.author}
+                  </div>
+                </TableCell>
+                <TableCell className="text-center px-4 py-4">
+                  <div className="text-sm font-mono bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full inline-block">
+                    {item.date_read ? item.date_read.toLocaleDateString() : 'N/A'}
+                  </div>
+                </TableCell>
+                <TableCell className="text-center px-4 py-4">
+                  <div className="flex justify-center">
+                    <Rating 
+                      name="star-rating"
+                      value={typeof item.overall_score === 'number' ? item.overall_score : parseFloat(item.overall_score.toString())}
+                      precision={0.1}
+                      readOnly
+                      size="medium"
+                      sx={{
+                        '& .MuiRating-iconFilled': {
+                          color: '#fbbf24',
+                        },
+                        '& .MuiRating-iconEmpty': {
+                          color: '#d1d5db',
+                        },
+                      }}
+                    />
+                  </div>
+                </TableCell>
+                <TableCell className="text-center px-4 py-4">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 text-blue-800 dark:text-blue-200">
+                    {item.overall_score}/5
+                  </div>
+                </TableCell>
+                <TableCell className="text-center px-4 py-4">
+                  <ReviewModal {...item}/>
+                </TableCell>
+              </TableRow>
+            )
+          }}
+        </TableBody>
+      </Table>
+    </div>
   );
 }
