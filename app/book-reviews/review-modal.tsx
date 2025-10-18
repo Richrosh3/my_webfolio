@@ -27,7 +27,7 @@ export default function ReviewModal(book: BookData) {
                 backdrop="blur"
                 isOpen={isOpen}
                 onOpenChange={onOpenChange}
-                radius="2xl"
+                radius="lg"
                 size="2xl"
                 classNames={{
                     backdrop: "backdrop-opacity-60",
